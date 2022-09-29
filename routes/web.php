@@ -211,7 +211,12 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function(){
         Route::get('/pendings/edit/{id}', [EICPendingController::class, 'edit'])->name('eicPending-edit');
         Route::put('/pendings/approve/{id}', [EICPendingController::class, 'approve'])->name('eicPending-approve');
         Route::post('/pendings/disapprove/{id}', [EICPendingController::class, 'disapprove'])->name('eicPending-disapprove');
+<<<<<<< HEAD
                 
         });
+=======
+        
+            });
+>>>>>>> master1
 
     });
