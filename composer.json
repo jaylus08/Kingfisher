@@ -17,7 +17,8 @@
         "laravelcollective/html": "^6.3",
         "owen-it/laravel-auditing": "^13.0",
         "shanmuga/laravel-entrust": "^3.0",
-        "unisharp/laravel-filemanager": "^2.4"
+        "unisharp/laravel-filemanager": "^2.4",
+        "ext-gd": "*"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
