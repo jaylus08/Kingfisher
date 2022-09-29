@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('articles', function (Blueprint $table) {
-            $table->string('publication_status');
+        Schema::create('likes', function (Blueprint $table) {
+            $table->id();
+            $table->integer('article_id');
+            $table->integer('user_id');
         });
     }
 
@@ -25,8 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('articles', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('likes');
     }
 };

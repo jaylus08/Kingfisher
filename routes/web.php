@@ -62,6 +62,9 @@ Route::get('/',[HomePageController::class, 'index'])->name('landing');//landing 
 Route::get('/articles',[NewsPageController::class, 'index'])->name('articles');//article section
 Route::get('/articles/{id}',[NewsPageController::class, 'listing']);//article section category
 
+Route::get('/liked/{id}', 'App\Http\Controllers\LikesController@like');//like 
+
+
 Route::get('/content/{slug}',[ContentPageController::class, 'index']);//article auth content
 
 Route::get('/search', [SearchController::class, 'index'])->name('search');//search page
