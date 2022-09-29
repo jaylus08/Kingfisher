@@ -68,6 +68,7 @@ class ArticleController extends Controller
         $article->thumb_image = "";
         $article->list_image = "";
         $article->created_by = Auth::id();
+        $article->publication_status = "ready";
         $article->save();
         
         $file = $request->file('img');
@@ -152,7 +153,7 @@ class ArticleController extends Controller
         $article->short_description = $request->short_description;;
         $article->description = $request->description;
         $article->category_id = $request->category_id;
-        
+        $article->publication_status = "ready";
         
         $article->save();
 
