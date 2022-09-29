@@ -21,12 +21,12 @@ class AssociateMiddleware
         if(\Auth::user()->user_type == '6'){
             return $next($request);
         } else {
-                return redirect('/')->with('message', 'Access Denied');
+            abort(403);
         }
 
     } else {
 
-        return redirect('/login')->with('message', 'Access Denied');
+        return redirect('/login');
     }
 
     return $next($request);
