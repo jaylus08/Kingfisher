@@ -38,7 +38,9 @@
         </div>
         <!-- entity_tag -->
         <div class="entity_social">
-            <span><i class="fa fa-heart" aria-hidden="true"></i><a href="{{ url('liked/' .$articles->id)}}" class="text-danger">{{$like}} Like</a> </span>
+            @auth
+            <span><i class="fa fa-heart" aria-hidden="true"></i><a href="{{ url('liked/' .$articles->id)}}" class="text-danger">{{$like}} Like</a></span>
+            @endauth
             <span><i class="fa fa-share-alt"></i>424 <a href="#">Shares</a> </span>
             <span><i class="fa fa-comments-o"></i>4 <a href="#">Comments</a> </span>
         </div>
